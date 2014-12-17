@@ -1,0 +1,148 @@
+
+/* Common
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Single
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.single #content {
+
+	article {
+
+		.entry-header {
+
+			.thumb {
+				width: 149px;
+				margin: 0;
+				float: left;
+				display: block;
+
+				img {
+					max-width: 100%;
+					vertical-align: middle;
+					margin: 0 auto;
+					border: 1px solid #dedede;
+					display: block;
+				}
+			}
+			.entry-title {
+				margin-left: 169px;
+			}
+			.event-date {
+				margin-left: 169px;
+			}
+		}
+	}
+}
+
+
+/* Page
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.parent-page #content {
+
+	.entry-content {
+
+		.child-page {
+
+			.thumb {
+				width: 149px;
+				margin: 0;
+				float: left;
+			}
+			.page-header,
+			.post-summary,
+			.more-page {
+				margin-left: 169px;
+			}
+			.more-page {
+				margin: 0 0 0 169px;
+			}
+			.child-page-list {
+				text-align: center;
+			}
+			@include clearfix();
+		}
+		.no-image {
+
+			.page-header,
+			.post-summary,
+			.more-page,
+			.child-page-list {
+				margin-left: 0;
+			}
+		}
+		@include clearfix();
+	}
+}
+.page-company #content {
+
+	.entry-content {
+
+		.two-box {
+
+			.page-content-box {
+
+				dl {
+					
+					dt {
+						width: 15%;
+						@include box-sizing( border-box );
+						display: inline-block;
+					}
+					dd {
+						width: 84%;
+						margin: 0;
+						@include box-sizing( border-box );
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-template-page-templatescustom-page-php #content {
+
+	.entry-header {
+
+		.topics-box {
+			p {
+				display: inline-block;
+			}
+			ul {
+				display: inline-block;
+
+				li {
+					display: inline-block;
+				}
+			}
+		}
+		@include clearfix();
+	}
+
+	.entry-content {
+
+		.on-image {
+			text-align: left;
+
+			.thumb {
+				width: 149px;
+				margin: 0;
+				float: left;
+
+				img {
+					max-width: 100%;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			.box-title,
+			.box-content {
+				margin-left: 169px;
+			}
+			@include clearfix();
+		}
+		.wpcf7 {
+			padding: 50px 68px;
+		}
+	}
+}

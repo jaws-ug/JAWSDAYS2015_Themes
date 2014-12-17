@@ -1,0 +1,13 @@
+.single .entry-content,
+.page-about-opsworks .entry-content,
+.page-about-jawsdays2014 .entry-content,
+.box-content,
+.page-solution-aws_opsworks .entry-content,
+.page-solution-chefserver_hostedchef .entry-content {
+
+	iframe {
+		width: inherit;
+		max-width: 100%;
+		height: auto;
+	}
+}

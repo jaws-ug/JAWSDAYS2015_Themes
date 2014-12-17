@@ -1,0 +1,81 @@
+/* Header
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Common
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ==|== image align layout ======================================================= */
+.alignnone, img.alignnone {
+	margin-left: 0;
+	margin-right: 0;
+}
+.alignleft {
+	margin: 12px 24px 12px 0;
+	float: left;
+}
+.alignright {
+	margin: 12px 0 12px 24px;
+	float: right;
+}
+
+img {
+	&.alignleft {
+		margin: 12px 24px 12px 0;
+	}
+	&.alignright {
+		margin: 12px 0 12px 24px;
+	}
+}
+
+/* Front Page
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#chef-new-post-box {
+
+	#new-post-content {
+
+		.new-post,
+		.new-area,
+		.blog-post {
+			width: 229px;
+
+			.thumb {
+				width: 100px;
+			}
+		}
+	}
+}
+
+#chef-pickup-page-box {
+
+	#pickup-page-content {
+
+		.pickup-page {
+			width: 229px;
+		}
+	}
+}
+
+/* Footer
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#footer-content {
+
+	#chef-new-post-box {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 91px 10px;
+		@include display-box;
+
+		.new-post-content {
+			max-width: 300px;
+			margin: 0 20px 0 0;
+			@include box-flex(1);
+		}
+		#new-post-engineer-blog {
+			margin-right: 0;
+			border-right: none;
+		}
+	}
+	#chef-contact-box {
+		padding: 83px 0;
+	}
+}
+

@@ -1,0 +1,41 @@
+/* Header
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#masthead {
+
+	#site-title  {
+
+		a {
+			background-image: url(images/site-logo@2x.png);
+			@include background-size( 187px auto );
+		}
+	}
+	#main-nav {
+
+		#menu-toggle {
+
+			span {
+				background-image: url(images/icon/icon-menu@2x.png);
+				@include background-size( 27px auto );
+			}
+		}
+		#main-nav-box{
+
+			ul {
+
+				li {
+
+					&.parent {
+
+						.open {
+
+							span {
+								background-image: url(images/icon/icon-arrow-01@2x.png);
+								@include background-size( 10px auto );
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
