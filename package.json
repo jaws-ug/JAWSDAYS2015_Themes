@@ -1,0 +1,20 @@
+{
+  "name": "jaws-days-2015",
+  "title": "JAWS Days 2015",
+  "description": "JAWS Days 2015 theme based on Iemoto",
+  "version": "0.1.0",
+  "homepage": "https://www.digitalcube.jp/",
+  "author": {
+    "name": "DigitalCube Co.,Ltd",
+    "url": "https://www.digitalcube.jp/"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.0",
+    "gulp-compass": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-replace": "^0.5.0",
+    "main-bower-files": "^2.4.1"
+  },
+  "keywords": []
+}

@@ -1,0 +1,31 @@
+{
+  "name": "jaws-days-2015",
+  "title": "JAWS Days 2015",
+  "description": "JAWS Days 2015 theme based on Iemoto",
+  "version": "0.1.0",
+  "homepage": "https://www.digitalcube.jp/",
+  "author": {
+    "name": "DigitalCube Co.,Ltd",
+    "url": "https://www.digitalcube.jp/"
+  },
+  "dependencies": {
+    "jquery-touchswipe": "~1.6.0",
+    "carouFredSel": "~6.2.1",
+    "equalize": "~1.0.1",
+    "FitText.js": "~1.2.0"
+  },
+  "overrides": {
+    "jquery": {
+      "ignore": "*"
+    },
+    "jquery-touchswipe": {
+      "main": "jquery.touchSwipe.min.js"
+    },
+    "carouFredSel": {
+      "main": "jquery.carouFredSel-6.2.1-packed.js"
+    },
+    "equalize": {
+      "main": "js/equalize.min.js"
+    }
+  }
+}

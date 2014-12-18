@@ -1,7 +1,13 @@
+<?php
+/**
+ * @package JAWS Days 2015
+ */
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php entry_thumbnail(); ?>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'athlete' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		<?php if ( is_category( 'event' ) ) : ?>
 			<p class="event-date">
 				<?php $post_date = get_field( 'event_date' );
@@ -18,8 +24,9 @@
 			</p>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
+
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<?php entry_more_link(); ?>
 	</div><!-- .entry-summary -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-## -->

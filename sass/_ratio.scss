@@ -1,0 +1,22 @@
+/* Header
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#masthead {
+
+	#site-title  {
+
+		a {
+			background-image: image-url('site-logo@2x.png');
+			@include background-size( 187px auto );
+		}
+	}
+	#main-nav {
+
+		#menu-toggle {
+
+			span {
+				background-image: image-url('icon/icon-menu@2x.png');
+				@include background-size( 27px auto );
+			}
+		}
+	}
+}

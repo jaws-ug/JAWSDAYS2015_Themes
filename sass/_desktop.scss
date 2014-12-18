@@ -83,7 +83,6 @@
 
 /* Common
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.archive-nav,
 .page-links {
 	margin: 12px 0 70px;
 }
@@ -104,11 +103,14 @@
 	}
 	p {
 		margin: 0 49px 20px;
-		clear: both;
+		// clear: both;
 
 		strong {
 			color: #f25116;
 		}
+	}
+	pre, address, dl {
+		margin: 0 49px 20px;
 	}
 	ol {
 		margin: 0 43px 20px;
@@ -218,6 +220,11 @@ img {
 	}
 }
 
+.post-navigation {
+	padding: 0 50px 50px;
+}
+
+
 /* Single
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .single #content,
@@ -266,21 +273,6 @@ img {
 	}
 }
 
-#single-nav {
-	padding: 0 50px 50px;
-
-	.nav-previous {
-		width: 50%;
-		float: left;
-	}
-	.nav-next {
-		width: 50%;
-		text-align: right;
-		float: right;
-	}
-	@include clearfix();
-}
-
 /* Front Page
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #main-img {
@@ -300,7 +292,7 @@ img {
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #footer-content {
 
-	#jawsdays2014-new-post-box {
+	#jawsdays2015-new-post-box {
 		max-width: 1000px;
 		margin: 0 auto 57px;
 
@@ -317,7 +309,7 @@ img {
 		}
 		@include clearfix();
 	}
-	#jawsdays2014-contact-box {
+	#jawsdays2015-contact-box {
 		padding: 82px 0;
 
 		p {

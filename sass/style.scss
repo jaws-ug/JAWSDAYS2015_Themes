@@ -1,0 +1,972 @@
+@charset "UTF-8";
+/*!
+Theme Name: JAWS Days 2015
+Theme URI: https://www.digitalcube.jp/
+Author: DigitalCube Co.,Ltd
+Author URI: https://www.digitalcube.jp/
+Description: JAWS Days 2015 theme based on Iemoto
+Version: <%= pkg.version %>
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jawsdays2015
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+JAWS Days 2015 is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+@import "compass";
+@import "mixins/mixins-master";
+
+/* Bass */
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #313131;
+	line-height: 1.5;
+	@include fz( 18 );
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table {
+	margin-top: 0;
+}
+
+h1 {
+	@include fz( 33 );
+	margin-bottom: 15px;
+}
+
+h2 {
+	@include fz( 30 );
+	margin-bottom: 15px;
+}
+
+h3 {
+	@include fz( 30 );
+	margin-bottom: 15px;
+}
+
+h4 {
+	@include fz( 27 );
+	margin-bottom: 15px;
+}
+
+h5 {
+	@include fz( 24 );
+	margin-bottom: 15px;
+}
+
+h6 {
+	@include fz( 24 );
+	margin-bottom: 15px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+/* Forms */
+@import "forms/forms";
+
+/* Assistive text */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	text-decoration: none;
+	text-transform: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* text color
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+a {
+	outline: none;
+
+	&:link, &:visited {
+		color: #231f20;
+		text-decoration: none;
+	}
+	&:hover, &:focus {
+		color: #ff9c08;
+		text-decoration: underline;
+	}
+	&:active {
+		color: #231f20;
+		text-decoration: none;
+	}
+}
+#colophon {
+
+	a {
+		text-decoration: none;
+
+		&:link, &:visited {
+			color: #e6e6e6;
+		}
+		&:hover, &:focus {
+			color: #ff9c08;
+		}
+	}
+}
+
+/* Layout
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#main {
+	margin-top: 25px;
+	background: #ebebe9;
+}
+.home #main {
+	margin-top: 0;
+	background: #fff;
+}
+
+#content {
+	padding: 10px;
+}
+
+/* Header
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#masthead {
+	padding: 20px 0 0;
+	color: #fff;
+
+	#site-title  {
+		width: 187px;
+		height: 63px;
+		margin: 0 auto 20px;
+		padding: 0;
+		overflow: hidden;
+
+		a {
+			width: 187px;
+			padding-top: 63px;
+			background: no-repeat image-url('site-logo.png');
+			display: block;
+		}
+	}
+
+	#main-nav {
+		margin-bottom: 20px;
+		padding: 10px;
+		background: #363636;
+		position: relative;
+
+		.menu-title {
+			display: none;
+		}
+		#menu-toggle {
+			text-align: center;
+			margin: 0 auto;
+			height: 27px;
+			overflow: hidden;
+			border: none;
+			background-color: transparent;
+			display: block;
+
+			span {
+				width: 27px;
+				padding-top: 27px;
+				background: no-repeat right 4px image-url('icon/icon-menu.png');
+				display: inline-block;
+			}
+		}
+		#main-nav-box{
+			width: 100%;
+			background: #fafafa;
+			display: none;
+			position: absolute;
+			left: 0px;
+			top: 47px;
+			z-index: 99999;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+
+					a {
+						width: 100%;
+						color: #313131;
+						border-bottom: 1px solid #fff;
+						padding: 14px 1em;
+						display: block;
+						@include box-sizing( border-box );
+
+						&:hover {
+							color: #ff9c08;
+						}
+					}
+					ul {
+						display: none;
+
+						&.menu-open {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		@include clearfix();
+	}
+}
+
+/* Common
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.page-title,
+.single .entry-title,
+.page .entry-title,
+.error404 .entry-title {
+	text-align: center;
+	@include fz( 72 );
+	margin-bottom: 0;
+}
+.entry-sub-title,
+.page-sub-title {
+	text-align: center;
+	@include fz( 18 );
+	font-weight: normal;
+}
+
+.page-links {
+	width: 100%;
+	@include fz( 16 );
+	text-align: center;
+	margin: 12px 0;
+	clear: both;
+
+	a {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		font-weight: bold;
+		@include border-radius(30px);
+		background: #ff9c08;
+		display: inline-block;
+		margin: 0 10px;
+
+		&:hover {
+			text-decoration: none;
+			background: #231f20;
+		}
+	}
+	> span {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		font-weight: bold;
+		@include border-radius(30px);
+		background: #231f20;
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+
+.social-button {
+	text-align: center;
+
+	div,
+	p {
+		width: auto;
+		vertical-align: top;
+		margin-right: 5px;
+		display: inline-block;
+	}
+	.fb-like {
+
+		span {
+			display: block;
+		}
+	}
+	.twitter-button {
+		width: 97px;
+		overflow: hidden;
+	}
+	#___plusone_0,
+	#___plusone_1 {
+		width: 60px !important;
+		overflow: hidden;
+	}
+}
+
+/* ==|== entry content layout ======================================================= */
+.entry-title {
+	word-wrap: break-word;
+}
+.entry-content {
+	word-wrap: break-word;
+	margin-bottom: 30px;
+
+	h1 {
+		border-top: 1px solid #dedede;
+		border-bottom: 1px solid #dedede;
+		padding: 5px 20px;
+		background: #fafafa;
+		clear: both;
+	}
+	h2 {
+		border-top: 4px solid #dedede;
+		border-bottom: 1px solid #dedede;
+		padding: 5px 20px;
+		background: #fafafa;
+		clear: both;
+	}
+	h3 {
+		border-top: 4px solid #dedede;
+		padding: 5px 20px;
+		clear: both;
+	}
+	h4 {
+		border-top: 1px solid #dedede;
+		padding: 5px 20px;
+		clear: both;
+	}
+	h5 {
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 5px 10px;
+		background: image-url('other/title-back.gif');
+		clear: both;
+	}
+	h6 {
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 5px 10px;
+		clear: both;
+	}
+	p {
+		margin: 0 20px 20px ;
+	}
+	ol {
+		margin: 0 13px 20px;
+
+		li {
+			margin-bottom: 5px;
+
+			ol {
+				margin: 5px 0 0;
+				padding-left: 30px;
+			}
+		}
+	}
+	pre, address, dl {
+		margin: 0 20px 20px;
+	}
+	ul {
+		margin: 0 26px 20px;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 5px;
+			padding-left: 26px;
+			background: no-repeat left 0.4em image-url('icon/icon-square-01.gif');
+
+			ul {
+				margin: 5px 5px 0;
+
+				li {
+					padding-left: 24px;
+					background: no-repeat left 0.6em image-url('icon/icon-square-02.gif');
+				}
+			}
+		}
+	}
+	blockquote {
+		margin: 0 20px 20px;
+		border: 1px solid #dedede;
+		padding: 10px;
+		background: #fafafa;
+
+		p {
+			margin: 20px 0 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	.table-box {
+		width: auto;
+		margin: 0 20px;
+		overflow: scroll;
+	}
+	table {
+		width: auto;
+		margin: 0 0 20px;
+
+		thead {
+			background: #424346;
+
+			th {
+				color: #fff;
+				text-align: left;
+				padding: 10px 20px;
+			}
+		}
+		tbody {
+
+			tr {
+				border-bottom: 1px solid #fafafa;
+
+				&.even {
+					background: #fafafa;
+				}
+			}
+			th {
+				width: 25%;
+				text-align: left;
+				padding: 10px 20px;
+			}
+			td {
+				width: 25%;
+				padding: 10px 20px;
+
+			}
+		}
+	}
+
+	.time-teble {
+		display: none;
+	}
+	.button-blue,
+	.pdf-link {
+		width: 320px;
+		margin: 20px auto;
+
+		a {
+			color: #fff;
+			@include fz( 16 );
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			@include border-radius(3px);
+			padding: 15px;
+			background: #3576e6;
+			display: block;
+		}
+		a:hover {
+			color: #fff;
+			background: #ff9c08;
+		}
+	}
+	.simplemap {
+		margin: 0 20px 20px;
+	}
+	input[type="text"],
+	input[type="email"] {
+		max-width: 100%;
+		@include box-sizing( border-box );
+	}
+	textarea {
+		max-width: 100%;
+		@include box-sizing( border-box );
+	}
+}
+
+/* ==|== image align layout ======================================================= */
+.alignnone, .alignleft, .alignright, .aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.aligncenter-img {
+	text-align: center;
+
+	.alignnone {
+		margin: 0 10px;
+		display: inline;
+	}
+}
+img {
+
+	&.alignnone, &.alignleft, &.alignright, &.aligncenter {
+		vertical-align: top;
+		margin-bottom: 12px;
+	}
+	&.size-full, &.size-large, &.header-image, &.wp-post-image {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+/* ==|== Caption ======================================================= */
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: 30px;
+	padding: 7px;
+	@include box-sizing( border-box );
+
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+	.wp-caption-text {
+		text-align: center;
+		margin: 10px 0;
+	}
+}
+
+.gallery-caption, .entry-caption {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #757575;
+}
+
+img.wp-smiley, .rsswidget img {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.entry-content dl.gallery-item {
+	margin: 0;
+}
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Archive
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.archive #content,
+.search #content {
+
+	.page-header {
+		margin-bottom: 20px;
+	}
+}
+.archive #main-content,
+.search #main-content {
+
+	article {
+		width: 100%;
+		margin-bottom: 15px;
+		border: 1px solid #dedede;
+		@include border-radius( 3px );
+		padding: 20px;
+		background: #fff;
+		@include box-sizing( border-box );
+
+		.thumb {
+			width: 147px;
+			height: 147px;
+			margin: 0 auto 15px;
+			border: 1px solid #dedede;
+			position: relative;
+
+			img {
+				max-width: 95%;
+				height: auto;
+				margin: 0 auto;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include opacity(0);
+			}
+		}
+		.entry-title {
+			@include fz( 36 );
+		}
+		.entry-more {
+			text-align: right;
+			margin: 0;
+
+			a {
+				@include fz( 16 );
+				text-align: center;
+				text-decoration: none;
+				color: #fff;
+				font-weight: bold;
+				@include border-radius(2px);
+				padding: 0.25em 2em;
+				background: #231f20;
+				display: inline-block;
+
+				&:hover {
+					background: #ff9c08;
+				}
+			}
+		}
+		@include clearfix();
+	}
+}
+
+/* Single
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.single #content,
+.page #content {
+
+	article {
+		width: 100%;
+		margin-bottom: 20px;
+		border: 1px solid #dedede;
+		@include border-radius( 3px );
+		background: #fff;
+		@include box-sizing( border-box );
+
+		.entry-header {
+			padding: 20px;
+			margin-bottom: 0;
+
+			.thumb {
+				display: none;
+			}
+			.entry-title {
+				color: #231f20;
+				text-align: left;
+				@include fz( 36 );
+			}
+			@include clearfix();
+		}
+		.entry-content {
+			word-wrap: break-word;
+			margin-bottom: 30px;
+		}
+		@include clearfix();
+	}
+}
+.page #content {
+
+	.entry-header {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	article {
+		padding-top: 20px;
+	}
+}
+
+.post-navigation {
+	padding: 0 20px 20px;
+}
+
+.post-navigation,
+.paging-navigation {
+	@include clearfix();
+	.nav-previous {
+		width: 50%;
+		float: left;
+	}
+	.nav-next {
+		width: 50%;
+		text-align: right;
+		float: right;
+	}
+	@include clearfix();
+}
+
+/* Page
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Front Page
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#main-img {
+	margin-bottom: 20px;
+	padding: 33px 0;
+	background: image-url('background/main_background.jpg') center center;
+
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+}
+#slide {
+	padding: 10px 0;
+	background: #fff;
+	@include opacity(0);
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			width: 218px;
+			height: 100px;
+			margin-left: 10px;
+			border: solid 1px #dedede;
+			position: relative;
+			float: left;
+
+			a {
+				width: 218px;
+				height: 100px;
+				display: block;
+			}
+
+			img {
+				max-width: 98%;
+				height: auto;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+		}
+		@include clearfix();
+	}
+}
+.home {
+
+	#slide {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+}
+
+/* Footer
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#footer-content {
+	background: #fff;
+
+	#jawsdays2015-new-post-box {
+		padding: 0 10px;
+		@include box-sizing( content-box );
+
+		.new-post-content {
+			margin-bottom: 20px;
+
+			.new-post-title {
+				@include fz( 20 );
+				text-align: center;
+				color: #fff;
+				@include text-shadow( 0, 1, 0 rgba( 0, 0, 0, 0.05 ) );
+				@include border-radius(2px);
+				padding: 3px 0;
+				position: 5px 0;
+				background: #231f20;
+			}
+			article {
+				margin-bottom: 30px;
+
+				.post-date {
+					margin: 0;
+				}
+				.post-title {
+					@include fz( 18 );
+					text-align: left;
+
+					a {
+						color: #424346;
+						text-decoration: underline;
+					}
+				}
+				.entry-more {
+
+					a {
+						color: #ff9c08;
+						text-decoration: none;
+					}
+				}
+			}
+			.more-archive-list {
+				text-align: right;
+				margin: 0;
+			}
+		}
+		#twitter-content {
+
+			.new-post-title {
+				padding: 3px 0;
+				background: #3d89ff;
+			}
+			iframe {
+				width: 100%;
+			}
+		}
+		#facebook-content {
+
+			.new-post-title {
+				padding: 3px 0;
+				background: #1e496c;
+			}
+			.fb_iframe_widget {
+				width: 100% !important;
+
+				> span {
+					width: 100% !important;
+
+					> iframe {
+						width: 100% !important;
+					}
+				}
+			}
+		}
+	}
+	#jawsdays2015-contact-box {
+		text-align: center;
+		padding: 30px 0;
+		background: #ebebe9;
+
+		p {
+			margin-bottom: 0;
+
+			&.text {
+				@include fz( 30 );
+				margin-bottom: 10px;
+			}
+			&.contact-button {
+				@include fz( 24 );
+
+				a {
+					width: auto;
+					color: #ffffff;
+					text-decoration: none;
+					@include text-shadow( 0, 1, 0 rgba( 0, 0, 0, 0.05 ) );
+					margin: 0 10px;
+					@include border-radius(2px);
+					background: #231f20;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+#colophon {
+	color: #e6e6e6;
+	text-align: center;
+	padding: 20px 10px;
+	background: #161616;
+
+	#footer-nav-box {
+		margin-bottom: 20px;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		a {
+			padding: 5px 0;
+			border-bottom: solid 1px #fafafa;
+			display: block;
+		}
+	}
+	#copyright {
+		margin-bottom: 20px;
+	}
+}
+
+/* Supported devices
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@media screen and (max-width: 320px) {
+	@import "mobile";
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+	@import "mobile_480";
+}
+@media screen and (min-width: 569px) {
+	@import "tablets600";
+}
+@media screen and (min-width: 601px) {
+	@import "tablets";
+}
+@media screen and (min-width: 800px) {
+	@import "tablets800";
+}*/
+@media screen and (min-width: 1024px) {
+	@import "desktop";
+}
+/* pixel ratio devices
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-moz-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
+	@import "ratio";
+}

@@ -1,32 +1,26 @@
+# Copyright (C) 2014 DigitalCube Co.,Ltd
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: JAWS Days 2015 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/JAWSDAYS2015_Themes\n"
 "POT-Creation-Date: 2014-12-18 08:41:19+00:00\n"
-"PO-Revision-Date: 2013-12-27 01:00+0900\n"
-"Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
-"Language-Team: \n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
-"X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:14 content-none.php:13
 msgid "Found article you are looking for."
-msgstr "お探しのページは見つかりません"
+msgstr ""
 
 #: 404.php:18 content-none.php:17
 msgid ""
 "The requchefed content was not found. You may find if you search for "
 "relevant posts."
 msgstr ""
-"指定されたページは存在しません。URLが正しく入力されているか、確認してくださ"
-"い。<br>一時的な問題によりサーバにアクセス出来ない可能性があります。しばらく"
-"してからもう一度お試しください。<br><a href=\"/\">≫トップページヘ戻る</a>"
 
 #: footer.php:17
 msgid "Twitter"
@@ -38,7 +32,7 @@ msgstr ""
 
 #: footer.php:28
 msgid "To participate in the JAWS DAYS 2015"
-msgstr "JAWS DAYS 2015 に参加する"
+msgstr ""
 
 #: footer.php:29
 msgid "Tickets"
@@ -46,11 +40,11 @@ msgstr ""
 
 #: functions.php:64
 msgid "Main Menu"
-msgstr "メインメニュー"
+msgstr ""
 
 #: functions.php:65
 msgid "Footer Menu"
-msgstr "フッターメニュー"
+msgstr ""
 
 #: header.php:23
 msgid "Skip to content"
@@ -58,49 +52,49 @@ msgstr ""
 
 #: header.php:34
 msgid "Main menu"
-msgstr "メインメニュー"
+msgstr ""
 
 #: header.php:35
 msgid "Open MENU"
-msgstr "メニューを開く"
+msgstr ""
 
 #: inc/extras.php:64
 msgid "What's new"
-msgstr "新着情報"
+msgstr ""
 
 #: inc/extras.php:70
 msgid "Page %s"
-msgstr "%sページ"
+msgstr ""
 
 #: inc/template-tags.php:21
 msgid "Posts navigation"
-msgstr "投稿ナビゲーション"
+msgstr ""
 
 #: inc/template-tags.php:25
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 以前の投稿"
+msgstr ""
 
 #: inc/template-tags.php:29
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
-msgstr "投稿ナビゲーション"
+msgstr ""
 
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
 
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
 
 #: inc/template-tags.php:99 inc/template-tags.php:292
 msgid "Permalink to %s"
-msgstr "パーマリンク: %s"
+msgstr ""
 
 #: inc/template-tags.php:127
 msgid "Read more &raquo;"
@@ -136,4 +130,3 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "DigitalCube Co.,Ltd"
 msgstr ""
-
