@@ -24,9 +24,13 @@
  */
 function jawsdays2015_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'jawsdays2015_custom_header_args', array(
-		'default-image' => get_template_directory_uri() . '/images/headers/main_image.png',
+		'default-image' => get_template_directory_uri() . '/images/headers/main_image.jpg',
+		'width'         => apply_filters( 'jawsdays2015_header_image_width', 950 ),
+		'height'        => apply_filters( 'jawsdays2015_header_image_height', 340 ),
+/*
 		'width'         => apply_filters( 'jawsdays2015_header_image_width', 1500 ),
 		'height'        => apply_filters( 'jawsdays2015_header_image_height', 479 ),
+*/
 		'header-text'   => false,
 	) ) );
 }

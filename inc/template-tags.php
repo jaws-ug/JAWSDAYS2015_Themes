@@ -228,16 +228,16 @@ add_action( 'save_post',     'jawsdays2015_category_transient_flusher' );
 /* HOME
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 function jawsdays2015_slide( $limit = -1 ) {
-	//echo get_jawsdays2015_slide( $limit );
+	echo get_jawsdays2015_slide( $limit );
 }
 function get_jawsdays2015_slide( $limit = -1 ) {
 	$output = '';
 	$posts_array = array();
 	$args = array(
-		'post_type' => 'sponsor',
+		'post_type'      => 'supporter',
 		'posts_per_page' => $limit,
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
+		'orderby'        => 'menu_order',
+		'order'          => 'ASC',
 	);
 	$posts_array = get_posts( $args );
 	$post_count = count($posts_array);
@@ -247,8 +247,8 @@ function get_jawsdays2015_slide( $limit = -1 ) {
 		foreach ( $posts_array as $post ) {
 			setup_postdata( $post );
 			$id = $post->ID;
-			$link = esc_url( get_field( '_sponsor_url', $id ) );
-			$blank = get_field( '_sponsor_target', $id );
+			$link = esc_url( get_field( '_supporter_url', $id ) );
+			$blank = get_field( '_supporter_target', $id );
 			if ( $blank ) {
 				$target = ' target="_blank"';
 			} else {

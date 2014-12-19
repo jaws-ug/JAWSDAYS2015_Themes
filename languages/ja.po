@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/JAWSDAYS2015_Themes\n"
-"POT-Creation-Date: 2014-12-18 08:41:19+00:00\n"
+"POT-Creation-Date: 2014-12-19 03:07:52+00:00\n"
 "PO-Revision-Date: 2013-12-27 01:00+0900\n"
 "Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: \n"
@@ -54,7 +54,7 @@ msgstr "フッターメニュー"
 
 #: header.php:23
 msgid "Skip to content"
-msgstr ""
+msgstr "コンテンツをスキップ"
 
 #: header.php:34
 msgid "Main menu"
@@ -72,49 +72,147 @@ msgstr "新着情報"
 msgid "Page %s"
 msgstr "%sページ"
 
+#: inc/post-type.php:14
+msgctxt "Post Type General Name"
+msgid "Speakers"
+msgstr ""
+
+#: inc/post-type.php:15
+msgctxt "Post Type Singular Name"
+msgid "Speaker"
+msgstr ""
+
+#: inc/post-type.php:16
+msgctxt "Post Type Menu Name"
+msgid "Speakers"
+msgstr "スピーカー"
+
+#: inc/post-type.php:17 inc/post-type.php:65
+msgid "Parent Item:"
+msgstr "親:"
+
+#: inc/post-type.php:18 inc/post-type.php:66
+msgid "All Items"
+msgstr "一覧"
+
+#: inc/post-type.php:19 inc/post-type.php:67
+msgid "View Item"
+msgstr "表示"
+
+#: inc/post-type.php:20 inc/post-type.php:68
+msgid "Add New Item"
+msgstr "新規追加"
+
+#: inc/post-type.php:21 inc/post-type.php:69
+msgid "Add New"
+msgstr "新規追加"
+
+#: inc/post-type.php:22 inc/post-type.php:70
+msgid "Edit Item"
+msgstr "編集"
+
+#: inc/post-type.php:23 inc/post-type.php:71
+msgid "Update Item"
+msgstr "更新"
+
+#: inc/post-type.php:24 inc/post-type.php:72
+msgid "Search Item"
+msgstr ""
+
+#: inc/post-type.php:25 inc/post-type.php:73
+msgid "Not found"
+msgstr "見つかりません"
+
+#: inc/post-type.php:26 inc/post-type.php:74
+msgid "Not found in Trash"
+msgstr "ゴミ箱は空です"
+
+#: inc/post-type.php:29
+msgctxt "Post Type label"
+msgid "Speakers"
+msgstr ""
+
+#: inc/post-type.php:30
+msgctxt "Post Type description"
+msgid "Speaker"
+msgstr ""
+
+#: inc/post-type.php:62
+msgctxt "Post Type General Name"
+msgid "Supporters"
+msgstr ""
+
+#: inc/post-type.php:63
+msgctxt "Post Type Singular Name"
+msgid "Supporter"
+msgstr ""
+
+#: inc/post-type.php:64
+msgctxt "Post Type Menu Name"
+msgid "Supporters"
+msgstr "サポーター"
+
+#: inc/post-type.php:77
+msgctxt "Post Type label"
+msgid "Supporters"
+msgstr ""
+
+#: inc/post-type.php:78
+msgctxt "Post Type description"
+msgid "Supporter"
+msgstr ""
+
+#: inc/template-tags.php:20
+msgid "&lt;"
+msgstr ""
+
 #: inc/template-tags.php:21
+msgid "&gt;"
+msgstr ""
+
+#: inc/template-tags.php:30
 msgid "Posts navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:25
+#: inc/template-tags.php:34
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 以前の投稿"
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:38
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:62
 msgid "Post navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:65
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:66
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:99 inc/template-tags.php:292
+#: inc/template-tags.php:109 inc/template-tags.php:302
 msgid "Permalink to %s"
 msgstr "パーマリンク: %s"
 
-#: inc/template-tags.php:127
+#: inc/template-tags.php:137
 msgid "Read more &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:168
+#: inc/template-tags.php:178
 msgid "Archives"
 msgstr ""
 
-#: inc/template-tags.php:275
+#: inc/template-tags.php:285
 msgid "News"
 msgstr ""
 
-#: inc/template-tags.php:297
+#: inc/template-tags.php:307
 msgid "Archive list &gt;"
 msgstr ""
 
@@ -137,3 +235,5 @@ msgstr ""
 msgid "DigitalCube Co.,Ltd"
 msgstr ""
 
+#~ msgid "speaker"
+#~ msgstr "スピーカー"

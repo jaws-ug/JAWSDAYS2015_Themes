@@ -118,38 +118,18 @@ function new_excerpt_more($more) {
 }
 
 /**
- * Query
+ * Query pre_get_posts
+ * http://notnil-creative.com/blog/archives/1996
  */
-add_action( 'pre_get_posts', 'add_news_post_type_category' );
-function add_news_post_type_category( $query ) {
-	if ( !is_admin() && $query->is_main_query() && get_query_var('news') ) {
-		$query->set( 'post_type', 'post' );
-		$query->is_archive = true;
-		$query->is_home = false;
-		$query->is_front_page = false;
+add_action( 'pre_get_posts', 'jaws_modify_main_query' );
+function jaws_modify_main_query( $query ) {
+	if ( is_admin() || ! $query->is_main_query() )
+		return;
+
+	if ( $query->is_post_type_archive( 'supporter' ) ) {
+		$query->set( 'posts_per_archive_page', -1 );
+		return;
 	}
-	return $query;
-}
-
-add_filter( 'rewrite_rules_array', 'news_rewrite_rules', 9 );
-function news_rewrite_rules( $rules ) {
-	$newrules = array();
-
-	/* News */
-	$newrules['news/?$'] = 'index.php?news=news';
-	$newrules['news/page/([0-9]{1,})/?$'] = 'index.php?news=news&paged=$matches[1]';
-	$newrules['news/([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$'] = 'index.php?news=news&year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]';
-	$newrules['news/([0-9]{4})/([0-9]{1,2})/?$'] = 'index.php?news=news&year=$matches[1]&monthnum=$matches[2]';
-	$newrules['news/([0-9]{4})/page/?([0-9]{1,})/?$'] = 'index.php?news=news&year=$matches[1]&paged=$matches[2]';
-	$newrules['news/([0-9]{4})/?$'] = 'index.php?news=news&year=$matches[1]';
-
-	return $newrules + $rules;
-}
-
-add_filter( 'query_vars', 'add_news_query_var' );
-function add_news_query_var( $vars ){
-	array_push( $vars, 'news' );
-	return $vars;
 }
 
 /**
