@@ -369,6 +369,7 @@ a:active {
   font-weight: normal;
 }
 
+.nav-links,
 .page-links {
   width: 100%;
   font-size: 16px;
@@ -377,35 +378,43 @@ a:active {
   margin: 12px 0;
   clear: both;
 }
+.nav-links a,
 .page-links a {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   color: #fff;
   font-weight: bold;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
   background: #ff9c08;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0px 3px;
 }
+.nav-links a:hover,
 .page-links a:hover {
   text-decoration: none;
   background: #231f20;
 }
+.nav-links > span,
 .page-links > span {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   color: #fff;
   font-weight: bold;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
   background: #231f20;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0px 3px;
+}
+.nav-links > span.dots,
+.page-links > span.dots {
+  color: #231f20;
+  background: transparent;
 }
 
 .social-button {
@@ -864,27 +873,21 @@ object {
 }
 
 .post-navigation:after,
-.paging-navigation:after {
+.posts-navigation:after {
   content: "";
   display: table;
   clear: both;
 }
 .post-navigation .nav-previous,
-.paging-navigation .nav-previous {
+.posts-navigation .nav-previous {
   width: 50%;
   float: left;
 }
 .post-navigation .nav-next,
-.paging-navigation .nav-next {
+.posts-navigation .nav-next {
   width: 50%;
   text-align: right;
   float: right;
-}
-.post-navigation:after,
-.paging-navigation:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* Page
@@ -1172,6 +1175,7 @@ object {
 
   /* Common
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+  .nav-links,
   .page-links {
     margin: 12px 0 70px;
   }

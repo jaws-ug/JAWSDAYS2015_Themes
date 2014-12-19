@@ -258,6 +258,7 @@ a {
 	font-weight: normal;
 }
 
+.nav-links,
 .page-links {
 	width: 100%;
 	@include fz( 16 );
@@ -266,15 +267,15 @@ a {
 	clear: both;
 
 	a {
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
 		color: #fff;
 		font-weight: bold;
-		@include border-radius(30px);
+		@include border-radius(25px);
 		background: #ff9c08;
 		display: inline-block;
-		margin: 0 10px;
+		margin: 0px 3px;
 
 		&:hover {
 			text-decoration: none;
@@ -282,15 +283,19 @@ a {
 		}
 	}
 	> span {
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
 		color: #fff;
 		font-weight: bold;
-		@include border-radius(30px);
+		@include border-radius(25px);
 		background: #231f20;
 		display: inline-block;
-		margin: 0 10px;
+		margin: 0px 3px;
+		&.dots {
+			color: #231f20;
+			background: transparent;
+		}
 	}
 }
 
@@ -738,7 +743,7 @@ object {
 }
 
 .post-navigation,
-.paging-navigation {
+.posts-navigation {
 	@include clearfix();
 	.nav-previous {
 		width: 50%;
@@ -749,7 +754,6 @@ object {
 		text-align: right;
 		float: right;
 	}
-	@include clearfix();
 }
 
 /* Page
