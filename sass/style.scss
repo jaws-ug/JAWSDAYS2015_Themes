@@ -189,8 +189,10 @@ a {
 			height: 27px;
 			overflow: hidden;
 			border: none;
-			background-color: transparent;
+			background: transparent;
 			display: block;
+			padding: 0;
+			@include box-shadow(none);
 
 			span {
 				width: 27px;
