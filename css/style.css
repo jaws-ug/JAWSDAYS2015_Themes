@@ -314,7 +314,7 @@ a:active {
 /* line 162, ../sass/style.scss */
 #masthead #site-title {
   width: 187px;
-  height: 63px;
+  height: 49px;
   margin: 0 auto 20px;
   padding: 0;
   overflow: hidden;
@@ -322,8 +322,8 @@ a:active {
 /* line 169, ../sass/style.scss */
 #masthead #site-title a {
   width: 187px;
-  padding-top: 63px;
-  background: no-repeat url('../images/site-logo.png?1388070899');
+  padding-top: 49px;
+  background: no-repeat url('../images/site-logo.png?1419222289');
   display: block;
 }
 /* line 177, ../sass/style.scss */
@@ -1687,7 +1687,7 @@ object {
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
   /* line 7, ../sass/_ratio.scss */
   #masthead #site-title a {
-    background-image: url('../images/site-logo@2x.png?1388070900');
+    background-image: url('../images/site-logo@2x.png?1419222289');
     -moz-background-size: 187px auto;
     -o-background-size: 187px auto;
     -webkit-background-size: 187px auto;
