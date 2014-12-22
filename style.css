@@ -163,6 +163,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="url"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
@@ -174,6 +175,7 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
+input[type="url"]:focus,
 textarea:focus {
   color: #313131;
 }
@@ -182,7 +184,8 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+input[type="url"] {
   padding: 3px;
 }
 
@@ -599,12 +602,11 @@ a:active {
   margin: 0 20px 20px;
 }
 .entry-content input[type="text"],
-.entry-content input[type="email"] {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+.entry-content input[type="email"],
+.entry-content input[type="url"],
+.entry-content input[type="password"],
+.entry-content input[type="search"],
+.entry-content input[type="url"],
 .entry-content textarea {
   max-width: 100%;
   -moz-box-sizing: border-box;
