@@ -273,7 +273,7 @@ function get_jawsdays2015_new_post( $args = array() ) {
 	$output = '';
 	$posts_array = array();
 	$defaults = array(
-		'posts_per_page' => 2,
+		'posts_per_page' => 3,
 	);
 	$args = wp_parse_args( $args, $defaults );
 	extract($args);
