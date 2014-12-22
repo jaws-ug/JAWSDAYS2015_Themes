@@ -376,7 +376,7 @@ a:active {
   font-weight: normal;
 }
 
-.nav-links,
+.pagination .nav-links,
 .page-links {
   width: 100%;
   font-size: 16px;
@@ -385,7 +385,7 @@ a:active {
   margin: 12px 0;
   clear: both;
 }
-.nav-links a,
+.pagination .nav-links a,
 .page-links a {
   width: 50px;
   height: 50px;
@@ -399,12 +399,12 @@ a:active {
   display: inline-block;
   margin: 0px 3px;
 }
-.nav-links a:hover,
+.pagination .nav-links a:hover,
 .page-links a:hover {
   text-decoration: none;
   background: #231f20;
 }
-.nav-links > span,
+.pagination .nav-links > span,
 .page-links > span {
   width: 50px;
   height: 50px;
@@ -418,7 +418,7 @@ a:active {
   display: inline-block;
   margin: 0px 3px;
 }
-.nav-links > span.dots,
+.pagination .nav-links > span.dots,
 .page-links > span.dots {
   color: #231f20;
   background: transparent;

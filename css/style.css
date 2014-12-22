@@ -427,7 +427,7 @@ a:active {
 }
 
 /* line 263, ../sass/style.scss */
-.nav-links,
+.pagination .nav-links,
 .page-links {
   width: 100%;
   font-size: 16px;
@@ -437,7 +437,7 @@ a:active {
   clear: both;
 }
 /* line 271, ../sass/style.scss */
-.nav-links a,
+.pagination .nav-links a,
 .page-links a {
   width: 50px;
   height: 50px;
@@ -452,13 +452,13 @@ a:active {
   margin: 0px 3px;
 }
 /* line 282, ../sass/style.scss */
-.nav-links a:hover,
+.pagination .nav-links a:hover,
 .page-links a:hover {
   text-decoration: none;
   background: #231f20;
 }
 /* line 287, ../sass/style.scss */
-.nav-links > span,
+.pagination .nav-links > span,
 .page-links > span {
   width: 50px;
   height: 50px;
@@ -473,7 +473,7 @@ a:active {
   margin: 0px 3px;
 }
 /* line 297, ../sass/style.scss */
-.nav-links > span.dots,
+.pagination .nav-links > span.dots,
 .page-links > span.dots {
   color: #231f20;
   background: transparent;
