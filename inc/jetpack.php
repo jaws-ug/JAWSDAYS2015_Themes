@@ -46,21 +46,29 @@ function my_wpas_default_suffix( $suffix ) {
 	return $suffix;
 }
 
-add_action( 'publicize_save_meta', 'my_publicize_save_meta', 10, 4);
+add_action( 'publicize_save_meta', 'my_publicize_save_meta', 10, 4 );
 function my_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
 	$suffix = " #jawsdays #jawsug";
-	$title = get_the_title($post_id);
-	$publicize_custom_message = get_post_meta($post_id, '_wpas_mess', true);
-	if (empty($publicize_custom_message)
-		|| ($publicize_custom_message &&
-			((strpos($publicize_custom_message, $suffix) === 0 && strpos($publicize_custom_message, $suffix . ' ' . $title) !== 0 )
-				|| strpos($publicize_custom_message, $title) === 0))) {
+	$title  = get_the_title( $post_id );
+	$link   = wp_get_shortlink( $post_id );
+	$publicize_custom_message = get_post_meta( $post_id, '_wpas_mess', true );
+	if ( empty( $publicize_custom_message ) ) {
 		$publicize_custom_message = sprintf(
 			"%s %s %s",
 			$title,
-			wp_get_shortlink($post_id, 'post'),
+			$link,
 			$suffix
 		);
-		update_post_meta($post_id, '_wpas_mess', $publicize_custom_message);
+	} else {
+		if ( strpos( $publicize_custom_message, $title ) === false ) {
+			$publicize_custom_message = $publicize_custom_message . $title;
+		}
+		if ( strpos( $publicize_custom_message, $link ) === false ) {
+			$publicize_custom_message = $publicize_custom_message . $link;
+		}
+		if ( strpos( $publicize_custom_message, $suffix ) === false ) {
+			$publicize_custom_message = $publicize_custom_message . $suffix;
+		}
 	}
+	update_post_meta($post_id, '_wpas_mess', $publicize_custom_message);
 }
