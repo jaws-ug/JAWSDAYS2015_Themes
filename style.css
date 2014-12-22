@@ -897,6 +897,7 @@ object {
 .posts-navigation .nav-previous {
   width: 50%;
   float: left;
+  text-align: left;
 }
 .post-navigation .nav-next,
 .posts-navigation .nav-next {
