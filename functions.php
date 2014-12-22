@@ -97,11 +97,10 @@ add_action( 'after_setup_theme', 'jawsdays2015_setup' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-/*
 function jawsdays2015_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'jawsdays2015' ),
-		'id'            => 'sidebar-1',
+		'name'          => 'フッターウィジェットエリア',
+		'id'            => 'footer-widgets-area',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -110,7 +109,6 @@ function jawsdays2015_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'jawsdays2015_widgets_init' );
-*/
 
 /**
  * Enqueue scripts and styles.
@@ -221,3 +219,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Add post_type.
  */
 require get_template_directory() . '/inc/post-type.php';
+
+/**
+ * Add widget.
+ */
+require get_template_directory() . '/inc/widget.php';
