@@ -128,6 +128,14 @@ function jaws_modify_main_query( $query ) {
 
 	if ( $query->is_post_type_archive( 'supporter' ) ) {
 		$query->set( 'posts_per_archive_page', -1 );
+		$query->set( 'order', 'ASC' );
+		$query->set( 'orderby', 'menu_order' );
+		return;
+	}
+
+	if ( $query->is_post_type_archive( 'speaker' ) ) {
+		$query->set( 'order', 'ASC' );
+		$query->set( 'orderby', 'menu_order' );
 		return;
 	}
 }
