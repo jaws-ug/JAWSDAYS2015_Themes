@@ -31,6 +31,13 @@ function my_open_graph_image_default( $image ) {
 	return $image;
 }
 
+add_action( 'wp_head', 'my_favicon' );
+function my_favicon() {
+	echo '<link rel="icon" href="' . get_stylesheet_directory_uri() . '/images/other/favicon.png" />' . "\n";
+	echo '<link rel="apple-touch-icon-precomposed" href="' . get_stylesheet_directory_uri() . '/images/other/favicon.png">' . "\n";
+
+}
+
 /*
  * パブリサイズ共有でサフィックス追加
  * original
@@ -71,4 +78,15 @@ function my_publicize_save_meta( $submit_post, $post_id, $service_name, $connect
 		}
 	}
 	update_post_meta($post_id, '_wpas_mess', $publicize_custom_message);
+}
+
+add_filter( 'jetpack_open_graph_image_width', 'my_jetpack_open_graph_image_width' );
+function my_jetpack_open_graph_image_width() {
+	$width = 96;
+	return $width;
+}
+add_filter( 'jetpack_open_graph_image_height', 'my_jetpack_open_graph_image_height' );
+function my_jetpack_open_graph_image_height() {
+	$height = 96;
+	return $height;
 }
