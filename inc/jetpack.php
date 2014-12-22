@@ -35,7 +35,6 @@ add_action( 'wp_head', 'my_favicon' );
 function my_favicon() {
 	echo '<link rel="icon" href="' . get_stylesheet_directory_uri() . '/images/other/favicon.png" />' . "\n";
 	echo '<link rel="apple-touch-icon-precomposed" href="' . get_stylesheet_directory_uri() . '/images/other/favicon.png">' . "\n";
-
 }
 
 /*
