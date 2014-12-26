@@ -344,12 +344,6 @@ a:active {
 #masthead #main-nav #main-nav-box ul li a:hover {
   color: #ff9c08;
 }
-#masthead #main-nav #main-nav-box ul li ul {
-  display: none;
-}
-#masthead #main-nav #main-nav-box ul li ul.menu-open {
-  display: block;
-}
 #masthead #main-nav:after {
   content: "";
   display: table;
@@ -1172,6 +1166,7 @@ object {
     position: absolute;
     top: 100%;
     right: 0;
+    display: none;
   }
   #masthead #main-nav #main-nav-box ul li > ul li {
     width: 100%;
@@ -1452,6 +1447,10 @@ object {
   #colophon #footer-nav-box li {
     margin: 0 1em;
     display: inline-block;
+    vertical-align: top;
+  }
+  #colophon #footer-nav-box li ul li {
+    display: block;
   }
   #colophon #footer-nav-box a {
     padding: 0;

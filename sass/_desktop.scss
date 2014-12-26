@@ -52,6 +52,7 @@
 						position: absolute;
 						top: 100%;
 						right: 0;
+						display: none;
 
 						li {
 							width: 100%;
@@ -352,6 +353,12 @@ img {
 		li {
 			margin: 0 1em;
 			display: inline-block;
+			vertical-align: top;
+			ul {
+				li {
+					display: block;
+				}
+			}
 		}
 		a {
 			padding: 0;
