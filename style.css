@@ -614,6 +614,17 @@ a:active {
   box-sizing: border-box;
 }
 
+.badge-container {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.badge-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* ==|== image align layout ======================================================= */
 .alignnone, .alignleft, .alignright, .aligncenter {
   margin-left: auto;
@@ -633,7 +644,7 @@ img.alignnone, img.alignleft, img.alignright, img.aligncenter {
   vertical-align: top;
   margin-bottom: 12px;
 }
-img.size-full, img.size-large, img.header-image, img.wp-post-image {
+img.header-image, img.wp-post-image {
   max-width: 100%;
   height: auto;
 }
@@ -1272,6 +1283,19 @@ object {
   }
   .entry-content .simplemap {
     margin: 0 49px 20px;
+  }
+
+  .badge {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+  }
+  .badge img {
+    margin-bottom: 0;
+  }
+
+  .badge-embed {
+    overflow: hidden;
   }
 
   /* ==|== image align layout ======================================================= */

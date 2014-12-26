@@ -503,6 +503,12 @@ a {
 		@include box-sizing( border-box );
 	}
 }
+.badge-container {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	@include clearfix();
+}
 
 /* ==|== image align layout ======================================================= */
 .alignnone, .alignleft, .alignright, .aligncenter {
@@ -524,7 +530,7 @@ img {
 		vertical-align: top;
 		margin-bottom: 12px;
 	}
-	&.size-full, &.size-large, &.header-image, &.wp-post-image {
+	&.header-image, &.wp-post-image {
 		max-width: 100%;
 		height: auto;
 	}
