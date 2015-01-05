@@ -96,7 +96,7 @@ function entry_thumbnail( $args = array() ) {
 function get_entry_thumbnail( $args = array() ) {
 	$defaults = array(
 		'id'       => get_the_ID(),
-		'size'     => 'archive-thumb',
+		'size'     => 'archive-crop-thumb',
 		'width'    => 148,
 		'height'   => 148,
 		'class'    => '',
@@ -254,7 +254,7 @@ function get_jawsdays2015_slide( $limit = -1 ) {
 			} else {
 				$target = '';
 			}
-			$img = get_the_post_thumbnail( $id, 'slide-thumb' );
+			$img = get_the_post_thumbnail( $id, 'slide-crop-thumb' );
 			if ( $link ) {
 				$output .= '<li><a href="' . $link . '"' . $target . '>' . $img . '</a></li>';
 			} else {

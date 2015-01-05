@@ -937,20 +937,19 @@ object {
   list-style: none;
 }
 #slide ul li {
-  width: 218px;
-  height: 100px;
   margin-left: 10px;
-  border: solid 1px #dedede;
-  position: relative;
   float: left;
 }
 #slide ul li a {
   width: 218px;
   height: 100px;
   display: block;
+  overflow: hidden;
+  border: solid 1px #dedede;
+  position: relative;
 }
 #slide ul li img {
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   display: block;
   position: absolute;

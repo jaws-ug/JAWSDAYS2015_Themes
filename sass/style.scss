@@ -787,21 +787,20 @@ object {
 		list-style: none;
 
 		li {
-			width: 218px;
-			height: 100px;
 			margin-left: 10px;
-			border: solid 1px #dedede;
-			position: relative;
 			float: left;
 
 			a {
 				width: 218px;
 				height: 100px;
 				display: block;
+				overflow: hidden;
+				border: solid 1px #dedede;
+				position: relative;
 			}
 
 			img {
-				max-width: 98%;
+				max-width: 100%;
 				height: auto;
 				display: block;
 				position: absolute;
