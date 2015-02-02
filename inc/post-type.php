@@ -29,7 +29,7 @@ function custom_post_type_speaker() {
 		'label'               => _x( 'Speakers', 'Post Type label', 'jawsdays2015' ),
 		'description'         => _x( 'Speaker', 'Post Type description', 'jawsdays2015' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'publicize', 'wpcom-markdown' ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'page-attributes', 'publicize', 'wpcom-markdown' ),
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,
