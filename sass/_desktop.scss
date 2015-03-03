@@ -131,19 +131,19 @@
 		margin: 0 49px 20px;
 	}
 	.time-teble {
-		@include fz(14);
+		@include fz(12);
 		display: block;
-
+		background: white;
 		thead {
 
 			th {
 				text-align: center;
 				vertical-align: middle;
 				border: solid 1px #dedede;
+				padding: 10px;
 			}
 		}
 		tbody {
-
 			tr.even {
 				background: transparent;
 			}
@@ -160,7 +160,7 @@
 			}
 		}
 		.time-line {
-			width: 10%;
+			width: 7%;
 			background: #eee;
 		}
 		.location {

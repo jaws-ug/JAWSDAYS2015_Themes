@@ -4,7 +4,7 @@ Theme URI: https://www.digitalcube.jp/
 Author: DigitalCube Co.,Ltd
 Author URI: https://www.digitalcube.jp/
 Description: JAWS Days 2015 theme based on Iemoto
-Version: 0.1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: jawsdays2015
@@ -1447,15 +1447,17 @@ object {
   }
   /* line 133, ../sass/_desktop.scss */
   .entry-content .time-teble {
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 12px;
+    font-size: 1.2rem;
     display: block;
+    background: white;
   }
   /* line 139, ../sass/_desktop.scss */
   .entry-content .time-teble thead th {
     text-align: center;
     vertical-align: middle;
     border: solid 1px #dedede;
+    padding: 10px;
   }
   /* line 147, ../sass/_desktop.scss */
   .entry-content .time-teble tbody tr.even {
@@ -1476,7 +1478,7 @@ object {
   }
   /* line 162, ../sass/_desktop.scss */
   .entry-content .time-teble .time-line {
-    width: 10%;
+    width: 7%;
     background: #eee;
   }
   /* line 166, ../sass/_desktop.scss */
