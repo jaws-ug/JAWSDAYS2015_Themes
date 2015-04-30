@@ -1,16 +1,16 @@
 # JAWS Days 2015用 WordPress テーマ
 
-License: GNU General Public License v2 or later
+License: GNU General Public License v2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This theme, like WordPress, is licensed under the GPL.
+This theme, like WordPress, is licensed under the GPL.  
 Use it to make something cool, have fun, and share what you've learned with others.
 
 JAWS Days 2015 is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Resetting and rebuilding styles have been helped along thanks to the fine work of  
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html  
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/  
 and Blueprint http://www.blueprintcss.org/
 
 ## Required
